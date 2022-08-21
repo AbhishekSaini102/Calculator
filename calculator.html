@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <style >
+      .aa{
+        height: 74.999px;
+        width: 300px;
+        background-color: rgb(255,255,256);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        border:none;
+        border-radius: 4px;
+        box-shadow: 0 1px rgb(179, 178, 178);
+      }
+      .aa:active{
+        background-color: #e9ecef;
+        box-shadow: 0 .5px #666;
+        transform: translateY(1px);
+
+      }
+      .bb{
+        width:250px;
+        text-decoration:none;
+        font-family:Arial, Helvetica, sans-serif;
+        /* color: white;   */
+        
+      }
+      a:hover{
+          /* background-color:rgb(	142, 202, 230); */
+          text-decoration:underline 5px rgb(40, 159, 250);;
+        
+      }
+      button:hover{
+        background-color: rgb(	206, 212, 218) ;
+      }
+      .ab:hover{
+        background-color:	rgb(127,200,248);
+      }
+      .cc{
+        height:140px;
+        width:1208px;
+        text-align:right;
+        background-color:	rgb(	233, 236, 239);
+        font-size: 60PX;
+        border:none;
+        /* border-color: rgb(	206, 212, 218); */
+        outline: none;
+      }
+     .bo{
+        text-align:center;
+      }
+      .aa:hover{
+        background-color:	rgb(238, 238, 240);
+      }
+      .ac:hover{
+        background-color:	rgb(238, 238, 240);
+      }
+      .bc:hover{
+        background-color:	rgb(228, 228, 228);
+      }
+      
+      .ab{
+        height:74.999px;
+        width: 300px;
+        background-color:rgb(90, 169, 230);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        border:none;
+        border-radius: 4px;
+        box-shadow: 0 1px rgb(179, 178, 178);
+
+      }
+      .ab:active{
+        
+        box-shadow: 0 .5px #666;
+          transform: translateY(1px);
+       }
+      .ac{
+        height: 74.999px;
+        width: 300px;
+        background-color:	rgb(246, 247, 248);
+        /* background-color:	rgb(	222, 226, 230); */
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        border:none;
+        border-radius: 4px;
+        box-shadow: 0 1px rgb(179, 178, 178);
+
+       }
+       .ac:active{
+        background-color: #e9ecef;
+        box-shadow: 0 .5px #666;
+          transform: translateY(1px);
+       }
+       .bc{
+        height: 30px;
+        width: 300px;
+        float: left;
+        width: 7%;
+        background-color:	rgb(	233, 236, 239);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        border:none;
+        border-radius: 4px;
+        
+        
+       }
+
+       /* .bcc{
+        height: 25px;
+        width: 300px;
+        float: right;
+        width: 10%;
+        background-color:	rgb(	233, 236, 239);
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        border:none;
+        border-radius: 4px;
+        
+       } */
+
+       .nm{
+        padding-bottom: 20px;
+        font-size: 18px;
+        
+       }
+       
+
+       .pp{
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+
+      /* .dark-mode {
+        background-color: rgb(20, 20, 20);
+        color: white;
+      } */
+
+      /* h3{
+        background-color: rgb(	233, 236, 239) ;
+        color: black;
+      } */
+      body{
+        background-color: rgb(	233, 236, 239);
+        color: black
+      }
+      /* @media (prefers-color-scheme: dark) {
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+      } */
+
+    
+       
+    </style>
+
+    
+
+  
+  <script>
+ 
+   
+    function root() {
+      
+        if(form1.answer.value!=''){
+          var s= document.getElementById("calc").value;
+          let c=parseInt(s);
+          var x=Math.sqrt(c);
+          document.getElementById("calc").value=x; 
+        }
+        
+        else{
+          document.getElementById("calc").value='';
+        }
+    }
+
+    function square() {
+        if(form1.answer.value!=''){
+          
+          var s= document.getElementById("calc").value;
+          let c=parseInt(s);
+          var x=Math.pow(c, 2);
+          document.getElementById("calc").value=x;
+                  
+        }
+        
+        else{
+          document.getElementById("calc").value='';
+        }
+    }
+    
+    function divideex() {
+
+      if(form1.answer.value!=''){
+          
+        var s= document.getElementById("calc").value;
+        var c=parseInt(s);
+        var x=1/c;
+        document.getElementById("calc").value=x;
+           
+        }
+      
+      else{
+        document.getElementById("calc").value='';
+      }
+    }
+
+    function back() {
+      var value = document.getElementById("calc").value;
+      document.getElementById("calc").value = value.substr(0, value.length - 1);
+    }
+
+    function percentage() {
+      // var z= document.getElementById("calc").value;
+      // let c=parseInt(s);
+      // form1.answer.value=0;
+      // form1.answer.value=eval(form1.answer.value);
+      // document.getElementById("calc").value=form1.answer.value/100;
+
+      if(form1.answer.value!=' '){
+          document.getElementById("calc").value='';
+           
+        }
+      // form1.answer.value=eval(form1.answer.value);
+      else{
+        document.getElementById("calc").value=form1.answer.value/100;
+      } 
+      // var z=eval(form1.answer.value);
+      // var x=c/100;
+      // alert((form1.answer.value)/100);
+    }
+
+    function negative() {
+      var s= document.getElementById("calc").value;
+      let c=parseInt(s);
+      var x=-Math.abs(c);
+      document.getElementById("calc").value=x;
+      // alert(x); 
+    }
+
+    
+    function CE() {
+      var value = document.getElementById("calc").value;
+      while (string[i] !== '*' && string[i] !== '+') {
+        i++;
+      }
+      document.getElementById("calc").value = value.substr(0, value.length -i++);
+    }
+
+    // function CE() {
+      
+    //   var s= document.getElementById("calc").value;
+    //   let c=parseInt(s);
+
+      
+      // let x=c+'';
+      // document.getElementById("calc").value=x;
+
+      // else if(){
+      //   let y=c+'-'+'';
+      //   document.getElementById("calc").value=y;
+      // }
+      // else if(form1.answer.value+='*'){
+      //   let z=c+'*'+'';
+      //   document.getElementById("calc").value=z;
+      // }
+      // else(form1.answer.value+='/'){
+      //   let w=c+'/'+'';
+      //   document.getElementById("calc").value=w;
+      // }
+      
+    // }
+
+    function equal(){
+        if(form1.answer.value!=''){
+          
+          document.getElementById("calc").value=eval(form1.answer.value);  
+        }
+        
+        else{
+          document.getElementById("calc").value='';
+      } 
+
+    }
+    
+    
+
+  
+      
+  </script>
+</head>
+<body>
+  <form name="form1">
+    <table  Border="0"height="55" width="1520">
+        <tr>
+          <!-- <th class="nm" Align="left" colspan="4"><img style="vertical-align:middle;" src="C:\Users\Dell\Documents\HTML\menubaar.png" height="20" width="25" alt="Standard" ><div style="display:inline;">  Standard</div></th> -->
+
+          <!-- <th class="nm" Align="left" colspan="4"><img style="vertical-align:middle;" src="C:\Users\Dell\Documents\HTML\menubaar.png" height="20" width="25" alt="Standard" ><div style="display:inline;">  Standard</div></th> -->
+
+           <th class="nm" Align="left" colspan="4"> <div style="display:inline;"><a href=""><i class="fa-solid fa-bars"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;Standerd &nbsp;&nbsp; <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></th>
+
+          <th class="bb" class="nm" Align="center" ><a class="bb"href="C:\Users\Dell\Documents\HTML\history.HTML" target="Ac" >History</a>
+          </th>
+
+          
+          <th class="bb" class="nm" Align="center">
+            <a  class="bb"href="C:\Users\Dell\Documents\HTML\memory.HTML" target="Ac">Memory</a>
+ 
+          </th>
+        </tr>
+    <!-- TEXTBOX -->
+        <tr>
+          <td  colspan="4"  height="120" width="1165">
+            <input class="cc" id="calc" name="answer" type="text" Name="Calculation" tabindex="1" placeholder="0" autofocus>  
+          </td>
+
+
+          <td class="bo" colspan="2" rowspan="8"><iframe width="300" height="645" name="Ac" src="C:\Users\Dell\Documents\HTML\iframeCalculator.HTML" title="Memory and History" frameborder="0" ></iframe></td>
+          </tr>
+
+          
+
+          <!-- <tr>
+            <td colspan=".5"align="center" ><div><input type="button" class="bc" value="M+" onclick="form1.answer.value+='M+'"></button></div></td>
+            <td align="center" ><input type="button"  class="bc" value="M-" onclick="form1.answer.value+='M-'"></button></td>
+            <td align="center" ><input type="button"  class="bc" value="MR" onclick="form1.answer.value+='MR'"></button></td>
+            <td align="center" ><input type="button"  class="bc" value="MS" onclick="form1.answer.value+='MS'"></button></td>
+            <!-- <td colspan="1"align="center" ><input type="button"  class="bc" value="MS" onclick="form1.answer.value+='MS'"></button></td> -->
+          <!-- </tr> -->
+
+          <tr>
+            <td colspan="4" Align="center" ><div><input type="button" class="bc" value="MC" onclick="form1.answer.value+='MC'"></button></div>
+              <div><input type="button"  class="bc" value="MR" onclick="form1.answer.value+='MR'"></button></div>
+              <div><input type="button"  class="bc" value="M+" onclick="form1.answer.value+='M+'"></button></div>
+              <div><input type="button"  class="bc" value="M-" onclick="form1.answer.value+='M-'"></button></div>
+              <div><input type="button"  class="bc" value="MS" onclick="form1.answer.value+='MS'"></button></div></td>
+
+            <!-- <td align="center" ><div><input type="button"  class="bcc" value="M-" onclick="form1.answer.value+='M-'"></button></div></td> -->
+            <!-- <td align="center" ><div><input type="button"  class="bc" value="MR" onclick="form1.answer.value+='MR'"></button></div></td> -->
+            <!-- <td align="center" ><input type="button"  class="bc" value="MS" onclick="form1.answer.value+='MS'"></button></td> -->
+            <!-- <td colspan="1"align="center" ><input type="button"  class="bc" value="MS" onclick="form1.answer.value+='MS'"></button></td> -->
+            
+          </tr>
+
+          <tr >
+            <td align="center" ><input type="button" class="ac"value="%" onclick="percentage()" placeholder="0"></button></td>
+            <!-- <td align="center" ><input type="button"class="ac" value="CE" onclick="CE()"></button></td> -->
+            <td align="center" ><input type="button"class="ac" value="CE" data-action="clear" onclick="form1.answer.value=''" placeholder="0"  ></button></td>
+            <td align="center" ><input type="button"class="ac" value="C" data-action="clear" onclick="form1.answer.value=''" placeholder="0"  ></button></td>
+            
+            <td align="center" ><input type="button"class="ac" value="«" onclick="back()" placeholder="0"></button></td>
+
+           <tr>
+            <td align="center" ><input type="button" class="ac" value="1/x" onclick="divideex()"></button></td>
+            <td align="center" ><input type="button" class="ac" value="x^2" onclick="square()"></button></td>
+            <td align="center" ></i><input type="button" class="ac" value="√x" onclick=root()></button></td>
+            <td align="center" ><input type="button" class="ac"value="÷" onclick="form1.answer.value+='/'"></button></td>
+           </tr>
+
+           <tr>
+            <td align="center" ><input type="button" class="aa" value="7" onclick="form1.answer.value+='7'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="8" onclick="form1.answer.value+='8'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="9" onclick="form1.answer.value+='9'"></button></td>
+            <td align="center" ><input type="button"class="ac" value="*"  onclick="form1.answer.value+='*'"></button></td>
+           </tr>
+
+
+           <tr>
+            <td align="center" ><input type="button" class="aa" value="4" onclick="form1.answer.value+='4'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="5" onclick="form1.answer.value+='5'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="6" onclick="form1.answer.value+='6'"></button></td>
+            <td align="center" ><input type="button" class="ac" value="-" onclick="form1.answer.value+='-'"></button></td>
+           </tr>
+
+           <tr>
+            <td align="center" ><input type="button" class="aa" value="1" onclick="form1.answer.value+='1'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="2" onclick="form1.answer.value+='2'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="3" onclick="form1.answer.value+='3'"></button></td>
+            <td align="center" ><input type="button" class="ac" value="+" onclick="form1.answer.value+='+'"></button></td>
+           </tr>
+
+           <tr>
+            <td align="center" ><input type="button" class="aa" value="+/-" onclick="negative()"></button></td>
+            <td align="center" ><input type="button" class="aa" value="0" onclick="form1.answer.value+='0'"></button></td>
+            <td align="center" ><input type="button" class="aa" value="." onclick="form1.answer.value+='0.'"></button></td>
+            <!-- <td align="center" ><input type="button" class="ab" value="=" onclick="form1.answer.value=eval(form1.answer.value)"></button></td> -->
+            <td align="center" ><input type="button" class="ab" value="=" id="en" onclick="equal()" placeholder="0"></button></td>
+           </tr>
+          
+        </table>
+
+      </form>
+
+      <!-- <h3>Abhishek kumar saini</h3> -->
+</body>
+</html>
